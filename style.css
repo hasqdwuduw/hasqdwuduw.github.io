@@ -1,0 +1,33 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.video-container {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 1;
+}
+.content{
+    position: absolute;
+    z-index: 1;
+    top: 8%;
+    left: 35%;
+    display: inline-block;
+  }
+.content a{
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
