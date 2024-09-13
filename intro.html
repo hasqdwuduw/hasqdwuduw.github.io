@@ -1,14 +1,114 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>个人介绍</title>
-    </head>
+<head>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
 
-    <body>
-        <h1>
-            李艺博 Li Yibo
-        </h1>
-        <h2>教育经历：</h2>
-        <p>南方科技大学:2021至今</p>
-    </body>
+h1, h2 {
+  border-bottom: none;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+  margin: 20px 0 10px 0;
+}
+
+h2 {
+  font-size: 2em;
+  margin: 20px 0 10px 0;
+}
+
+.info {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.info p {
+  margin: 5px 0;
+}
+
+.content {
+  margin: 20px;
+}
+
+.content h2 {
+  margin-top: 30px;
+}
+
+.content p {
+  margin-bottom: 10px;
+}
+
+.content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.content li {
+  margin-bottom: 5px;
+}
+</style>
+</head>
+<body>
+
+<div>
+  <h1>李艺博</h1>
+
+  <div class="info">
+    <p><strong>南方科技大学</strong></p>
+    <p>📞 15909822363</p>
+    <p>📫 12111628@mail.sustech.edu.cn</p>
+  </div>
+</div>
+
+<hr>
+
+<div class="content">
+  <h2>教育经历</h2>
+
+  <p><strong>本科</strong>                                                                                         <strong>2021.09 至今</strong></p>
+  <p>南方科技大学</p>
+  <p>统计与数据科学系 -- 数据科学与大数据技术专业</p>
+  <p>GPA：3.76/4</p>
+  <p>专业导师：杨鹏</p>
+
+  <h2>学术经历</h2>
+
+  <p><strong>竞赛</strong> -- <strong>Kaggle LMSYS - Chatbot Arena Human Preference Predictions</strong></p>
+  <p>旨在帮助聊天机器人的回复更加符合人类的偏好，这项竞赛要求根据数据集中的prompt和不同大模型的回复，来预测用户更加偏好哪一个回复。</p>
+  <p>我通过使用 Qlora微调 Google开源的 Gemma 2 9B 模型，并通过数据增强增加训练样本，训练得到一个分类器，在提供的测试集上取得0.943的 log loss。 </p>
+
+  <p><strong>文献整理</strong> -- <strong>阅读整理关于 few shot learning 论文</strong></p>
+  <p>为了完成 Kaggle **ARC Prize 2024** 竞赛，调查目前关于 few shot learning 的研究。我阅读了十篇左右相关领域论文，并将有价值的核心内容以及理念整理成一篇阅读报告（目前仍在进行中），为后续实现算法完成竞赛做准备。</p>
+
+  <p><strong>论文复现</strong> -- <strong>复现论文 Neural Collaborative Filtering</strong></p>
+  <p>论文创作和代码编写时间是2017年左右，原代码使用当时比较热门的keras实现了论文中提到的三种算法。</p>
+  <p>在学习pytorch之后，我使用pytorch复现这篇推荐系统领域的经典论文，包括构建数据集，实现论文中的GMF,MLP和NeuMF三种方法，以及比较不同层数的MLP的效果，最终取得了和原论文相似的实验结果，证明工作的可复现性。</p>
+
+  <p><strong>项目</strong> -- <strong>使用神经网络实现逆强化学习</strong></p>
+  <p>传统逆强化学习方法基本是通过假设状态的 reward 可以通过状态向量的线性和非线性组合表示，然后通过迭代的方法优化这种奖励的表示，使得产生的轨迹最贴合专家轨迹。即使与深度学习相结合也只是考虑通过神经网络中更加复杂的线性和非线性组合来获得更加复杂的奖励的表示。</p>
+  <p>考虑到强化学习中有着直接使用神经网络实现的策略梯度算法，我同样尝试完全使用神经网络实现逆强化学习算法，即给定policy作为输入，通过神经网络获得reward作为输出。在网格世界下，我使用值迭代算法获得5000条policy，reward数据对来训练一个五层CNN，由于神经网络推断只涉及到前向传播且不需要每一次都经历迭代，所以最终得到的模型可以在极短的时间内获得结果，但是损失略高于传统算法且不稳定。</p>
+
+  <h2>参加会议</h2>
+  <p>"Brain-network-inspired computing for next-generation efficient and sustainable AI", Prof.Carlo Vittorio Cannistraci, Tsinghua Laboratory of Brain and Intelligence,  Sep 2024</p>
+  <p>"User behavior simulation based on large oracle model agent", Prof.Xu CHEN, Renmin University of China, Jun 2024</p>
+
+  <h2>荣誉奖励</h2>
+  <p>南科大新生奖学金，2021-09</p>
+  <p>国家励志奖学金，2023-11</p>
+  <p>大学生创新创业大赛校级奖， 2024-05</p>
+
+  <h2>技能</h2>
+  <ul>
+    <li>掌握Hadoop和Spark等大数据架构及技术，具备处理和使用大规模数据的能力</li>
+    <li>具有坚实的数学和统计理论基础</li>
+    <li>熟悉LLM原理和prompt工程等，能够掌控LLM对科研工作方面给与帮助</li>
+  </ul>
+</div>
+
+</body>
 </html>
